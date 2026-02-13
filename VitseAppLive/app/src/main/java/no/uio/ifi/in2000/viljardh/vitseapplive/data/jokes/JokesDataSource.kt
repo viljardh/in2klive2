@@ -6,7 +6,6 @@ import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.client.request.get
 import io.ktor.client.statement.HttpResponse
 import io.ktor.serialization.gson.gson
-import kotlinx.coroutines.runBlocking
 import no.uio.ifi.in2000.viljardh.vitseapplive.model.jokes.Joke
 import no.uio.ifi.in2000.viljardh.vitseapplive.model.jokes.Jokes
 
@@ -29,14 +28,3 @@ class JokesDataSource {
         return jokes.jokes
     }
 }
-
-//fun main() {
-//    val dataSource = JokesDataSource()
-//
-//    runBlocking {
-//        val jokes = dataSource.fetchJokes()
-//        jokes.forEach {
-//            println(it.joke)
-//        }
-//    }
-//}
